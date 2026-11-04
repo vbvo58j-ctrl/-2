@@ -1,0 +1,18 @@
+
+===== STATIC_SOURCE_AND_RESOURCES =====
+PASS: static source checks (no Flutter SDK needed)
+PASS: STATIC_SOURCE_AND_RESOURCES
+
+===== PRODUCTION_SECURITY_GATE =====
+BLOCKER: Wi-Fi Aware PSK is derived from discoverable peer IDs, not an authenticated secret.
+BLOCKER: LAN frames are not demonstrably end-to-end encrypted or authenticated.
+BLOCKER: Bluetooth RFCOMM is insecure-mode (no pairing) and carries JSON without application-layer E2E.
+BLOCKER: The app-lock PIN is stored as plain text in SharedPreferences.
+BLOCKER: Release builds are signed with the debug key.
+FAIL: PRODUCTION_SECURITY_GATE: do not assert 100% security or ship as E2E-secure
+FAIL: PRODUCTION_SECURITY_GATE
+FAIL: Flutter SDK was not found in PATH; cannot verify the Android build
+
+========== ACCEPTANCE SUMMARY ==========
+PASS=1 FAIL=2 SKIPPED=4
+The build is NOT verified. Read the failing lines above.
